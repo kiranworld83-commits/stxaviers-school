@@ -32,7 +32,7 @@ export default function Contact() {
   src="https://www.google.com/maps?q=St+Xavier+Jr+Sr+School+Muzaffarpur+Bihar&output=embed"
   width="100%"
   height="300"
-  style="border:0; border-radius:10px;"
+  style={{ border: 0, borderRadius: "10px" }}
   loading="lazy"
 ></iframe>
 
