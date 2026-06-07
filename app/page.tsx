@@ -1,58 +1,71 @@
 export default function Home() {
   return (
-    <main>
+    <main style={{ fontFamily: "Arial" }}>
+
       {/* HERO SECTION */}
       <section style={{
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
+        padding: "60px 20px",
         textAlign: "center",
-        background: "#f9fafb",
-        padding: "20px"
+        background: "#1e3a8a",
+        color: "white"
       }}>
-        
-        <h1 style={{
-          fontSize: "40px",
-          fontWeight: "bold",
-          color: "#1f2937"
-        }}>
-          St. Xavier's Jr./Sr. School
+        <img
+          src="/logo.png"
+          style={{ width: "90px", borderRadius: "50%" }}
+        />
+
+        <h1 style={{ fontSize: "36px", marginTop: "15px" }}>
+          St. Xavier’s Junior School
         </h1>
 
-        <p style={{
-          fontSize: "18px",
-          marginTop: "10px",
-          color: "#4b5563"
-        }}>
-          Goshala Road, Muzaffarpur, Bihar
+        <p style={{ marginTop: "10px", opacity: 0.9 }}>
+          Excellence in Education • Discipline • Growth
         </p>
-
-        <div style={{ marginTop: "20px" }}>
-          <button style={{
-            padding: "10px 20px",
-            marginRight: "10px",
-            background: "#1f2937",
-            color: "white",
-            border: "none",
-            borderRadius: "8px"
-          }}>
-            Explore School
-          </button>
-
-          <button style={{
-            padding: "10px 20px",
-            background: "white",
-            color: "#1f2937",
-            border: "1px solid #1f2937",
-            borderRadius: "8px"
-          }}>
-            View Gallery
-          </button>
-        </div>
-
       </section>
+
+      {/* HIGHLIGHTS */}
+      <section style={{ padding: "40px 20px" }}>
+
+        <h2>Our Facilities</h2>
+
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          gap: "15px",
+          marginTop: "20px"
+        }}>
+
+          {[
+            "Labs",
+            "Library",
+            "Sports",
+            "Swimming Pool",
+            "Hostel",
+            "Transport"
+          ].map((item, i) => (
+            <div key={i} style={{
+              padding: "20px",
+              background: "#f3f4f6",
+              borderRadius: "10px",
+              textAlign: "center"
+            }}>
+              {item}
+            </div>
+          ))}
+
+        </div>
+      </section>
+
+      {/* QUICK LINKS */}
+      <section style={{ padding: "40px 20px", background: "#f9fafb" }}>
+        <h2>Quick Access</h2>
+
+        <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+          <a href="/gallery">Gallery</a>
+          <a href="/about">About School</a>
+        </div>
+      </section>
+
     </main>
   );
 }
